@@ -1,4 +1,4 @@
-# 🚀 Reliable File Transfer Protocol over UDP
+#  Reliable File Transfer Protocol over UDP
 A custom implementation of a **reliable and resumable file transfer system built on top of UDP** using Python.  
 This project demonstrates how reliability mechanisms similar to TCP can be implemented at the **application layer** while using the faster but unreliable **UDP transport protocol**.
 
@@ -24,32 +24,32 @@ The system ensures:
 
 # ⚙️ Key Features
 
-## 📦 Chunk-Based Transfer
+##  Chunk-Based Transfer
 Large files are divided into **fixed-size chunks** before transmission.  
 Each chunk is sent individually as a UDP packet.
 
-## 🔢 Sequence Numbers
+##  Sequence Numbers
 Each packet carries a **sequence number** to ensure correct ordering of data.
 
-## 📩 Acknowledgement System
+##  Acknowledgement System
 The server sends **ACK packets** for successfully received chunks.
 
-## 🔁 Retransmission Mechanism
+##  Retransmission Mechanism
 If an ACK is not received within a timeout period, the client **retransmits the packet**.
 
-## ♻ Resume Interrupted Transfers
+##  Resume Interrupted Transfers
 If a transfer stops midway, the server remembers received chunks and the client resumes from the **last successfully received chunk**.
 
-## 🔐 File Integrity Verification
+##  File Integrity Verification
 The client generates a **SHA-256 hash** of the original file.  
 After reconstruction, the server verifies the hash to ensure the file was not corrupted.
 
-## ⚡ Throughput Optimization
+##  Throughput Optimization
 A **sliding window protocol** allows multiple packets to be sent before waiting for acknowledgements, improving transfer speed.
 
 ---
 
-# 🏗 System Architecture
+#  System Architecture
           +----------------------+
           |        CLIENT        |
           |----------------------|
@@ -102,19 +102,19 @@ reliable-udp-file-transfer/
 
 # ▶ Running the Project
 
-## 1️⃣ Start the Server
+## 1 Start the Server
 python3 server.py
 
 The server will start listening for incoming UDP packets.
 ---
-## 2️⃣ Run the Client
+## 2️ Run the Client
 python3 client.py <SERVER_IP> <PORT> <FILE_PATH>
 
 Example:
 python3 client.py 127.0.0.1 5000 sample_files/test.txt
 ---
 
-# 🧪 Demo Instructions
+#  Demo Instructions
 1. Start the server.
 2. Run the client and send a file.
 3. Observe chunk transmission and ACK responses.
@@ -123,7 +123,7 @@ python3 client.py 127.0.0.1 5000 sample_files/test.txt
 6. 
 ---
 
-# 📊 Packet Structure
+#  Packet Structure
 Each packet transmitted over UDP follows this structure:
 
 | Field | Description |
@@ -136,7 +136,7 @@ Each packet transmitted over UDP follows this structure:
 
 ---
 
-# 🧠 Technologies Used
+#  Technologies Used
 
 - Python 3
 - UDP Socket Programming
@@ -146,7 +146,7 @@ Each packet transmitted over UDP follows this structure:
 
 ---
 
-# 📈 Learning Outcomes
+#  Learning Outcomes
 This project demonstrates:
 
 - Reliable communication over unreliable protocols
@@ -157,7 +157,7 @@ This project demonstrates:
 
 ---
 
-# 🔮 Future Improvements
+#  Future Improvements
 Possible enhancements include:
 
 - Multi-client support
@@ -167,7 +167,7 @@ Possible enhancements include:
 
 ---
 
-# 👨‍💻 Author
+#  Author
 
 **Deepika K**  
 Computer Science Engineering Student
