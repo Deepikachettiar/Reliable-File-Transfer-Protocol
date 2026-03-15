@@ -83,6 +83,7 @@ A **sliding window protocol** allows multiple packets to be sent before waiting 
 ---
 
 # 📂 Project Structure
+```
 reliable-udp-file-transfer/
 │
 ├── client.py # Client application (file sender)
@@ -97,7 +98,7 @@ reliable-udp-file-transfer/
 ├── README.md
 └── docs/
 └── architecture.png
-
+```
 ---
 
 # ▶ Running the Project
